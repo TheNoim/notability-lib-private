@@ -22,6 +22,18 @@ export interface INotabilityReference {
 	UID: number;
 }
 
+export enum NotabilityDrawInstructionType {
+	CURVE,
+	SHAPE,
+	MEDIA
+}
+
+export interface NotabilityDrawInstruction {
+	'@NType': NotabilityDrawInstructionType;
+}
+
+export type DrawInstructionArray = NotabilityDrawInstruction[];
+
 export interface InkedSpatialHash extends INotabilityClass {
 	$class: 'InkedSpatialHash';
 	curvescolors: INotabilityReference | Buffer;
@@ -30,12 +42,15 @@ export interface InkedSpatialHash extends INotabilityClass {
 	curvespoints: INotabilityReference | string; // base64 encoded float32 array
 	curvesstyles: INotabilityReference | string;
 	curveswidth: INotabilityReference | string;
+	shapes: INotabilityReference | string; // base64 encoded something
 }
 
 export interface ImageMediaObject extends INotabilityClass {
 	unscaledContentSize: INotabilityReference | string;
 	documentOrigin: INotabilityReference | string;
 	documentContentOrigin: INotabilityReference | string;
+	figure: INotabilityReference;
+	zIndex: INotabilityReference | number;
 }
 
 export interface NSTime extends INotabilityClass {
