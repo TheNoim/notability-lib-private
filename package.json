@@ -3,9 +3,14 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"license": "MIT",
+	"scripts": {
+		"build:client": "esbuild src/client/index.ts --bundle --outfile=dist/index.js --tsconfig=src/client/tsconfig.json --target=chrome90 --format=esm"
+	},
 	"dependencies": {
 		"@types/node": "^15.0.1",
 		"browser-hex": "^1.0.1",
+		"esbuild": "^0.11.17",
+		"paper": "^0.12.15",
 		"simple-plist": "^1.1.1"
 	},
 	"devDependencies": {

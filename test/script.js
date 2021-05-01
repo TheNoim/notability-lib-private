@@ -64,8 +64,9 @@ fetch('data.json')
                         document.body.appendChild(img)
                         break;
                     case NTypes.CURVE: {
-                        if (instruction.style && instruction.style.strokeWidth) {
-                            ctx.lineWidth = instruction.style.strokeWidth * zoomFactor;
+                        console.warn({ instruction });
+                        if (instruction.width) {
+                            ctx.lineWidth = instruction.width * zoomFactor;
                         }
                         ctx.beginPath();
                         ctx.strokeStyle = `rgba(${instruction.color.r}, ${instruction.color.g}, ${instruction.color.b}, ${instruction.color.a})`;
