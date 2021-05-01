@@ -22,7 +22,18 @@ import {
 } from "./points";
 import {Color, CoordinateData, IPoint} from "./IPoints";
 import {NotabilityMedia} from "./IMedia";
-import {NotabilityBasicShape, NotabilityShapeCircle, NotabilityShapes, NotabilityShapeType} from "./IShapes";
+import {
+	CGPathInstruction,
+	CGPathInstructionType,
+	NotabilityBasicShape,
+	NotabilityShapeCircle,
+	NotabilityShapes,
+	NotabilityShapeType
+} from "./IShapes";
+import {writeFileSync} from "fs";
+import {join} from 'path';
+import {SerializationType, ShapeBufferReader} from "./shape-buffer-reader";
+import {createBezierKitPath} from "./bezier-kit-path";
 
 export class NotabilitySession {
 	/**
@@ -68,9 +79,9 @@ export class NotabilitySession {
 
 	private convertShapeColor(colorObjc: { rgba: [number,number,number,number] }) {
 		return {
-			r: colorObjc?.rgba?.[0] ?? 0,
-			g: colorObjc?.rgba?.[1] ?? 0,
-			b: colorObjc?.rgba?.[2] ?? 0,
+			r: colorObjc?.rgba?.[0] * 100 ?? 0,
+			g: colorObjc?.rgba?.[1] * 100 ?? 0,
+			b: colorObjc?.rgba?.[2] * 100 ?? 0,
 			a: colorObjc?.rgba?.[3] ?? 1,
 		} as Color;
 	}
@@ -91,6 +102,7 @@ export class NotabilitySession {
 		const data = this.getClassForType<InkedSpatialHash>("InkedSpatialHash");
 		const shapesEncodedData = this.safeReferenceAccess(data?.shapes);
 		const decoded = Buffer.from(shapesEncodedData, 'base64');
+		writeFileSync(join(__dirname, '../../InkedSpatialHash.plist'), decoded);
 		const shapeRawData = plist.parse(decoded);
 		const xml = plist.stringify(shapeRawData);
 		const shapeData = shapeRawData?.shapes ?? [];
@@ -110,6 +122,7 @@ export class NotabilitySession {
 			if (shape?.appearance?.strokeColor) basic.style!.strokeColor = this.convertShapeColor(shape?.appearance?.strokeColor);
 			if (shape?.appearance?.fillColor) basic.style!.fillColor = this.convertShapeColor(shape?.appearance?.fillColor);
 			if (shape?.appearance?.strokeWidth) basic.style!.strokeWidth = shape?.appearance?.strokeWidth;
+			debugger;
 			switch (kind) {
 				case 'line':
 					newShapeData.push({
@@ -129,6 +142,7 @@ export class NotabilitySession {
 					break;
 				case 'rectangle':
 				case 'square':
+					debugger;
 					newShapeData.push({
 						...basic,
 						type: NotabilityShapeType.RECTANGLE,
@@ -257,6 +271,7 @@ export class NotabilitySession {
 							(Math.sqrt(Math.pow(vectorCenter2[0], 2) + Math.pow(vectorCenter2[1], 2)))
 						)
 					);
+
 					newShapeData.push({
 						...basic,
 						type: NotabilityShapeType.ELLIPSE,
@@ -268,17 +283,31 @@ export class NotabilitySession {
 					});
 					break;
 				case 'partialshape':
+					const debugPoints = [
+						...shape?.extremePoints?.points?.map(v => ({ x: v[0], y: v[1] })),
+					];
+					const corners2 = [
+						...shape?.rotatedRect?.corners?.map(v => ({ x: v[0], y: v[1] })),
+					];
+					const rect = [
+						...shape?.rect?.map(v => ({ x: v[0], y: v[1] })),
+					];
+
+					const strokePath = createBezierKitPath(shape.strokePath);
+
+					const outlinePath = createBezierKitPath(shape.outlinePath);
+
 					newShapeData.push({
 						...basic,
 						type: NotabilityShapeType.PARTIALSHAPE,
-						debugPoints: [
-							...shape?.extremePoints?.points?.map(v => ({ x: v[0], y: v[1] })),
-							...shape?.rotatedRect?.corners?.map(v => ({ x: v[0], y: v[1] })),
-							...shape?.rect?.map(v => ({ x: v[0], y: v[1] })),
-						]
+						debugPoints,
+						corners: corners2,
+						rect,
+						strokePath,
+						outlinePath
 					})
-					const res = new Buffer(shape?.strokePath, 'base64').readBigInt64LE(0);
-					debugger;
+
+					// debugger;
 					break;
 				default:
 					debugger;
@@ -326,9 +355,17 @@ export class NotabilitySession {
 		const coordinateDataArray: CoordinateData[] = [];
 		const colorRawData = this.getColorData();
 		const colorChunks = chunk(Array.from(colorRawData), 4) as unknown as Array<number[]>;
+		const bezierObject = this.safeReferenceAccess(data.bezierPathsDataDictionary)
+		for (const ref of bezierObject["NS.objects"]) {
+			const buf = this.safeReferenceAccess(ref);
+			const bPath = createBezierKitPath(buf);
+			debugger;
+		}
+
 		for (let i = 0; i < curvesArray.length; i++) {
 			const curve = curvesArray[i];
 			const colorDataArray = colorChunks[i];
+			debugger;
 			coordinateDataArray.push({
 				'@NType': NotabilityDrawInstructionType.CURVE,
 				points: curve.map(arr => ({ x: arr[0], y: arr[1] })),

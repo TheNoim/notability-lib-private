@@ -1,0 +1,119 @@
+yarn run v1.22.4
+$ /Users/nilsbergmann/Entwicklung/Notability-Lib/node_modules/.bin/ts-node src/test.ts
+Stroke Path: 
+Dump: /Users/nilsbergmann/Entwicklung/Notability-Lib/dumps/strokePath-1590319886940.bin
+Offset   00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+000000   25 B3 E5 48 06 00 00 00 00 01 03 03 01 03 0F 00   %³åH............
+000010   00 60 66 66 E4 3F 4E 3B 8F CE 2D 9A 3B 40 00 00   .`ffä?N;.Î-.;@..
+000020   00 60 66 66 E4 3F 00 00 00 00 00 00 00 00 00 00   .`ffä?..........
+000030   00 60 66 66 E4 3F 7E 44 05 EF 80 88 D6 BF 7E 44   .`ffä?~D.ï..Ö¿~D
+000040   05 EF 80 88 D6 3F 00 00 00 60 66 66 E4 BF 00 00   .ï..Ö?...`ffä¿..
+000050   00 00 00 00 00 00 00 00 00 60 66 66 E4 BF 7E 44   .........`ffä¿~D
+000060   05 EF 80 88 D6 BF 00 00 00 60 66 66 E4 BF 00 00   .ï..Ö¿...`ffä¿..
+000070   00 60 66 66 E4 BF 7E 44 05 EF 80 88 D6 BF 00 00   .`ffä¿~D.ï..Ö¿..
+000080   00 60 66 66 E4 BF 00 00 00 00 00 00 00 00 E0 FF   .`ffä¿........àÿ
+000090   FF 5F 66 66 E4 BF 9C 79 2D 4B 79 A0 3B 40 08 C3   ÿ_ffä¿.y-Ky ;@.Ã
+0000A0   C5 DE 8C 66 CC BF 01 CB 29 27 B2 93 3B 40 92 FC   ÅÞ.fÌ¿.Ë)'².;@.ü
+0000B0   66 97 2D 31 CA 3F 60 0A 01 5C 47 91 3B 40 0F 00   f.-1Ê?`..\G.;@..
+0000C0   00 60 66 66 E4 3F 4E 3B 8F CE 2D 9A 3B 40         .`ffä?N;.Î-.;@
+
+Vektor 48: (0, 5)
+Vektor 80: (0, 5)
+Vektor 112: (0, 0)
+Vektor 144: (-1, -59)
+Vektor 176: (102, 0)
+Int count: 5
+Outline Path: 
+Dump: /Users/nilsbergmann/Entwicklung/Notability-Lib/dumps/outlinePath-1590319886941.bin
+Offset   00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+000000   25 B3 E5 48 02 00 00 00 00 01 00 00 00 00 00 00   %³åH............
+000010   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00   ................
+000020   00 00 DA CD 4B 30 2A 95 3B 40                     ..ÚÍK0*.;@
+
+Stroke Path: 
+Dump: /Users/nilsbergmann/Entwicklung/Notability-Lib/dumps/strokePath-1590319886941.bin
+Offset   00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+000000   25 B3 E5 48 06 00 00 00 00 01 03 03 01 03 22 00   %³åH..........".
+000010   00 60 66 66 E4 3F 14 7A 18 A1 A5 42 44 40 00 00   .`ffä?.z.¡¥BD@..
+000020   00 60 66 66 E4 3F 01 00 00 E0 D0 22 51 40 00 00   .`ffä?...àÐ"Q@..
+000030   00 60 66 66 E4 3F 45 05 EF 60 59 39 51 40 7E 44   .`ffä?E.ï`Y9Q@~D
+000040   05 EF 80 88 D6 3F 01 00 C0 AC 9D 4B 51 40 00 00   .ï..Ö?..À¬.KQ@..
+000050   00 00 00 00 00 00 01 00 C0 AC 9D 4B 51 40 7E 44   ........À¬.KQ@~D
+000060   05 EF 80 88 D6 BF 01 00 C0 AC 9D 4B 51 40 00 00   .ï..Ö¿..À¬.KQ@..
+000070   00 60 66 66 E4 BF 45 05 EF 60 59 39 51 40 00 00   .`ffä¿E.ï`Y9Q@..
+000080   00 60 66 66 E4 BF 01 00 00 E0 D0 22 51 40 F5 FF   .`ffä¿...àÐ"Q@õÿ
+000090   FF 5F 66 66 E4 BF F1 72 C1 49 21 39 44 40 2E 75   ÿ_ffä¿ñrÁI!9D@.u
+0000A0   14 03 9F 00 CB BF 84 1F 5E C7 E6 41 44 40 98 42   ....Ë¿..^ÇæAD@.B
+0000B0   01 9B 17 A5 CB 3F CF 46 BB A4 F5 44 44 40 22 00   ...¥Ë?ÏF»¤õDD@".
+0000C0   00 60 66 66 E4 3F 14 7A 18 A1 A5 42 44 40         .`ffä?.z.¡¥BD@
+
+Vektor 48: (0, 5)
+Vektor 80: (0, 5)
+Vektor 112: (0, 0)
+Vektor 144: (-1, 20)
+Vektor 176: (1, 0)
+Int count: 5
+Outline Path: 
+Dump: /Users/nilsbergmann/Entwicklung/Notability-Lib/dumps/outlinePath-1590319886941.bin
+Offset   00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+000000   25 B3 E5 48 02 00 00 00 00 01 00 00 00 00 00 00   %³åH............
+000010   00 00 30 69 1D F4 07 42 44 40 00 00 00 00 00 00   ..0i.ô.BD@......
+000020   00 00 01 00 00 E0 D0 22 51 40                     .....àÐ"Q@
+
+Stroke Path: 
+Dump: /Users/nilsbergmann/Entwicklung/Notability-Lib/dumps/strokePath-1590319886942.bin
+Offset   00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+000000   25 B3 E5 48 06 00 00 00 00 01 03 03 01 03 4E 48   %³åH..........NH
+000010   18 51 58 65 46 40 01 00 80 79 6A 74 41 40 01 00   .QXeF@...yjtA@..
+000020   00 E0 D0 22 41 40 01 00 80 79 6A 74 41 40 78 F5   .àÐ"A@...yjtA@xõ
+000030   21 DE BF F5 40 40 01 00 80 79 6A 74 41 40 01 00   !Þ¿õ@@...yjtA@..
+000040   80 46 37 D1 40 40 8A 0A DE E1 E1 4F 41 40 01 00   .F7Ñ@@..ÞááOA@..
+000050   80 46 37 D1 40 40 01 00 00 E0 D0 22 41 40 01 00   .F7Ñ@@...àÐ"A@..
+000060   80 46 37 D1 40 40 78 F5 21 DE BF F5 40 40 78 F5   .F7Ñ@@xõ!Þ¿õ@@xõ
+000070   21 DE BF F5 40 40 01 00 80 46 37 D1 40 40 01 00   !Þ¿õ@@...F7Ñ@@..
+000080   00 E0 D0 22 41 40 01 00 80 46 37 D1 40 40 02 8E   .àÐ"A@...F7Ñ@@..
+000090   C6 8D FD 6E 46 40 00 00 80 46 37 D1 40 40 27 01   Æ.ýnF@...F7Ñ@@'.
+0000A0   B5 74 80 6C 46 40 EC B4 16 18 68 07 41 40 69 77   µt.lF@ì´..h.A@iw
+0000B0   3F 67 43 69 46 40 B6 5D EE 11 E6 3B 41 40 4E 48   ?gCiF@¶]î.æ;A@NH
+0000C0   18 51 58 65 46 40 01 00 80 79 6A 74 41 40         .QXeF@...yjtA@
+
+Vektor 48: (33, -128)
+Vektor 80: (-128, -128)
+Vektor 112: (33, 0)
+Vektor 144: (-58, -75)
+Vektor 176: (63, 24)
+Int count: 5
+Outline Path: 
+Dump: /Users/nilsbergmann/Entwicklung/Notability-Lib/dumps/outlinePath-1590319886942.bin
+Offset   00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+000000   25 B3 E5 48 02 00 00 00 00 01 01 00 00 E0 D0 22   %³åH.........àÐ"
+000010   41 40 01 00 00 E0 D0 22 41 40 F6 93 58 D3 A6 6A   A@...àÐ"A@ö.XÓ¦j
+000020   46 40 01 00 00 E0 D0 22 41 40                     F@...àÐ"A@
+
+Stroke Path: 
+Dump: /Users/nilsbergmann/Entwicklung/Notability-Lib/dumps/strokePath-1590319886942.bin
+Offset   00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+000000   25 B3 E5 48 07 00 00 00 00 01 03 03 01 03 03 4A   %³åH...........J
+000010   4E A3 58 68 D0 4C 40 02 00 80 46 37 D1 40 40 01   N£XhÐL@...F7Ñ@@.
+000020   00 00 E0 D0 22 51 40 01 00 80 46 37 D1 40 40 45   ..àÐ"Q@...F7Ñ@@E
+000030   05 EF 60 59 39 51 40 01 00 80 46 37 D1 40 40 01   .ï`Y9Q@...F7Ñ@@.
+000040   00 C0 AC 9D 4B 51 40 78 F5 21 DE BF F5 40 40 01   .À¬.KQ@xõ!Þ¿õ@@.
+000050   00 C0 AC 9D 4B 51 40 01 00 00 E0 D0 22 41 40 01   .À¬.KQ@...àÐ"A@.
+000060   00 C0 AC 9D 4B 51 40 8A 0A DE E1 E1 4F 41 40 45   .À¬.KQ@..ÞááOA@E
+000070   05 EF 60 59 39 51 40 01 00 80 79 6A 74 41 40 01   .ï`Y9Q@...yjtA@.
+000080   00 00 E0 D0 22 51 40 01 00 80 79 6A 74 41 40 40   ..àÐ"Q@...yjtA@@
+000090   0B A3 E9 9B C8 4C 40 01 00 80 79 6A 74 41 40 73   .£é.ÈL@...yjtA@s
+0000A0   A5 20 DF 7D CA 4C 40 C4 46 BC E1 09 54 41 40 98   ¥ ß}ÊL@ÄF¼á.TA@.
+0000B0   7A AA 45 37 CC 4C 40 FF 8B 4B 45 57 33 41 40 7E   zªE7ÌL@ÿ.KEW3A@~
+0000C0   C5 88 28 AC CD 4C 40 C6 12 CC 45 1C 13 41 40 A4   Å.(¬ÍL@Æ.ÌE..A@¤
+0000D0   EB 91 AA AE CE 4C 40 CD 07 5A C0 EA FD 40 40 B1   ë.ª®ÎL@Í.ZÀêý@@±
+0000E0   69 24 00 9A CF 4C 40 3E 68 D2 1C E9 E7 40 40 4A   i$..ÏL@>hÒ.éç@@J
+0000F0   4E A3 58 68 D0 4C 40 02 00 80 46 37 D1 40 40      N£XhÐL@...F7Ñ@@
+
+Vektor 48: (5, 0)
+Vektor 80: (0, 0)
+Vektor 112: (5, 0)
+Vektor 144: (11, -91)
+Vektor 176: (122, -59)
+Vektor 208: (-21, 105)
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

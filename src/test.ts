@@ -8,7 +8,9 @@ import { join } from 'path';
 
 // const sessionPath = join(__dirname, '../Skizzegalvanisches Element/Session.plist');
 // const sessionPath = join(__dirname, '../Ellipse/Session.plist');
-const sessionPath = join(__dirname, '../SimplePartialShape/Session.plist');
+const sessionPath = join(__dirname, '../SimplePartialShape Colors/Session.plist');
+// const sessionPath = join(__dirname, '../SimplePartialShape/Session.plist');
+// const sessionPath = join(__dirname, '../Note 11. May 2020/Session.plist');
 
 const bplistData = readFileSync(sessionPath);
 

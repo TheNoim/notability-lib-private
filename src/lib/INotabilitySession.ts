@@ -10,6 +10,11 @@ export interface INotabilityClassDescription {
 	$classes?: string[];
 }
 
+export interface NSDictionary<T extends unknown> {
+	'NS.keys': (INotabilityReference | string)[];
+	'NS.objects': (INotabilityReference | T)[];
+}
+
 export interface INotabilityBaseClass {
 	$class: INotabilityReference;
 }
@@ -43,6 +48,7 @@ export interface InkedSpatialHash extends INotabilityClass {
 	curvesstyles: INotabilityReference | string;
 	curveswidth: INotabilityReference | string;
 	shapes: INotabilityReference | string; // base64 encoded something
+	bezierPathsDataDictionary: INotabilityReference | NSDictionary<Buffer>;
 }
 
 export interface ImageMediaObject extends INotabilityClass {
